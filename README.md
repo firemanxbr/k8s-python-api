@@ -65,3 +65,5 @@ $ kubectl get svc
 2) Reduce the size of the image of the container. This example it's using a bigger image. Recommended to use alpine with uwsgi.ini configuration to load the main Python module of the application.
 3) Use the Kubernetes on the cloud than minikube to test properly the NGINX ingress controller. Minikube can offer the external IP to the load balancer that will keep the status: pending...
 4) Create a Helm chart to the application to keep the code of deployment in the DRY strategy that is easier to maintain, update and deployment with one unique command. 
+5) Use the valid domain to allow to access without any custom configuration into /etc/resolv.conf or /etc/hosts to test it.
+6) Add Cert-Manager to use [Let's Encrypt](https://letsencrypt.org/) or [Venafi](https://www.venafi.com/) to auto-generate and manage the HTTPS certificates on Kubernetes.  
